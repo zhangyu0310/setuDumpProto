@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package picdump;
+
+option go_package="../picdump";
+
+service Courier {
+  rpc SendPic (PicRequest) returns (PicReply) {}
+}
+
+message PicRequest {
+  bytes pic = 1;
+}
+
+message PicReply {
+  string message = 1;
+}
