@@ -10,6 +10,7 @@ service Courier {
 
 message PicRequest {
   bytes pic = 1;
+  string picName = 2;
 }
 
 message PicReply {
