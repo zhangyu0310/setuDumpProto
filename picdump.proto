@@ -1,15 +1,16 @@
 syntax = "proto3";
 
-package picdump;
+package transmit;
 
-option go_package="../picdump";
+option go_package="../transmit";
 
-service Courier {
+service PicCourier {
   rpc SendPic (PicRequest) returns (PicReply) {}
 }
 
 message PicRequest {
   bytes pic = 1;
+  string picName = 2;
 }
 
 message PicReply {

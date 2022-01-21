@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package transmit;
+
+option go_package="../transmit";
+
+service SetuCourier {
+  rpc SendSuTu (SeTuRequest) returns (SeTuReply) {}
+}
+
+message SeTuRequest {
+  string title = 1;
+  string desc = 2;
+  string originalUrl = 3;
+  string url = 4;
+  string picBase64 = 5;
+  string picMd5 = 6;
+}
+
+message SeTuReply {
+  string errMessage = 1;
+}
